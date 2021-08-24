@@ -66,7 +66,14 @@ class BirdTest {
     @Test
     public void testRoosterIsMaleChicken() {
         Rooster rooster = new Rooster();
-        Assertions.assertTrue(rooster instanceof Chicken);
         Assertions.assertEquals(Gender.MALE, rooster.getGender());
+    }
+
+    @Test
+    public void testMaleChickenSay() {
+        Chicken rooster = new Chicken(Gender.MALE);
+        rooster.say();
+        Assertions.assertEquals("Cock-a-doodle-doo", outputStreamCaptor.toString()
+                .trim());
     }
 }

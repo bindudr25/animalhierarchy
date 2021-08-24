@@ -15,7 +15,12 @@ public class Chicken implements Sayable {
     }
 
     public void say() {
-        System.out.println("Cluck, Cluck");
+        if (gender.equals(Gender.MALE)) {
+            Rooster rooster = new Rooster();
+            rooster.say();
+        } else {
+            System.out.println("Cluck, Cluck");
+        }
     }
 
     public Gender getGender() {
