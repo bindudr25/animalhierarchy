@@ -1,7 +1,4 @@
-import com.animal.bird.Bird;
-import com.animal.bird.Chicken;
-import com.animal.bird.Duck;
-import com.animal.bird.Rooster;
+import com.animal.bird.*;
 import com.type.Gender;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -74,6 +71,17 @@ class BirdTest {
         Chicken rooster = new Chicken(Gender.MALE);
         rooster.say();
         Assertions.assertEquals("Cock-a-doodle-doo", outputStreamCaptor.toString()
+                .trim());
+    }
+
+    @Test
+    public void testParrotSaysBasedOnLivesWith() {
+        Parrot parrot = new Parrot();
+        parrot.say();
+        parrot.livesWith("CAT");
+        parrot.say();
+        Assertions.assertEquals("Woof,woof\n" +
+                "Me ow", outputStreamCaptor.toString()
                 .trim());
     }
 }
