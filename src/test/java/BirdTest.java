@@ -78,10 +78,10 @@ class BirdTest {
     public void testParrotSaysBasedOnLivesWith() {
         Parrot parrot = new Parrot();
         parrot.say();
-        parrot.livesWith("CAT");
+        parrot.livesWith("DUCK");
         parrot.say();
         Assertions.assertEquals("Woof,woof\n" +
-                "Me ow", outputStreamCaptor.toString()
+                "Quack, quack", outputStreamCaptor.toString()
                 .trim());
     }
 }

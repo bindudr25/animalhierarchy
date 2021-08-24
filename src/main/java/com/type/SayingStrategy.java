@@ -3,6 +3,7 @@ package com.type;
 import com.animal.Cat;
 import com.animal.Dog;
 import com.animal.Sayable;
+import com.animal.bird.Duck;
 import com.animal.bird.Rooster;
 
 
@@ -19,6 +20,9 @@ public class SayingStrategy {
                 break;
             case "ROOSTER":
                 strategy = new Rooster();
+                break;
+            case "DUCK":
+                strategy = new Duck();
                 break;
             default:
                 break;
