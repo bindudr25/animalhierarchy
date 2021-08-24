@@ -1,1 +1,1 @@
-# animalhierarchy
+# animal hierarchy exercise
