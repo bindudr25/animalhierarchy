@@ -1,4 +1,5 @@
 import com.animal.bird.*;
+import com.fish.Dolphin;
 import com.fish.Fish;
 import com.fish.Shark;
 import com.type.Gender;
@@ -34,6 +35,14 @@ class FishTest {
         Assertions.assertEquals("large", shark.getSize());
         shark.eat();
         Assertions.assertEquals("I eat other fish", outputStreamCaptor.toString()
+                .trim());
+    }
+
+    @Test
+    public void testDolphinCanSwim() {
+        Dolphin dolphin = new Dolphin();
+        dolphin.swim();
+        Assertions.assertEquals("I am Swimming", outputStreamCaptor.toString()
                 .trim());
     }
 
