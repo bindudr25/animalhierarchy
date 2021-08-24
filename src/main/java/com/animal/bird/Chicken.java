@@ -1,9 +1,10 @@
 package com.animal.bird;
 
+import com.animal.Animal;
 import com.animal.Sayable;
 import com.type.Gender;
 
-public class Chicken implements Sayable {
+public class Chicken extends Animal implements Sayable {
     private Gender gender;
 
     public Chicken() {

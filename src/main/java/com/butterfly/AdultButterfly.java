@@ -1,8 +1,11 @@
 package com.butterfly;
 
-public class AdultButterfly extends Butterfly
+import com.animal.Flyable;
+
+public class AdultButterfly extends Butterfly implements Flyable
 {
     public AdultButterfly(Catterpillar catterpillar) {
+        System.out.println("metamorphosising!");
     }
     public void fly() {
         System.out.println("I am flying!");

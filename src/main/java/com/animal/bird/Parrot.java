@@ -1,9 +1,10 @@
 package com.animal.bird;
 
+import com.animal.Animal;
 import com.animal.Sayable;
 import com.type.SayingStrategy;
 
-public class Parrot implements Sayable {
+public class Parrot extends Animal  implements Sayable {
 
     public Parrot(){
         livesWith("DOG");
