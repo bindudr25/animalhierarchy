@@ -1,6 +1,8 @@
-import com.animal.Bird;
-import com.animal.Chicken;
-import com.animal.Duck;
+import com.animal.bird.Bird;
+import com.animal.bird.Chicken;
+import com.animal.bird.Duck;
+import com.animal.bird.Rooster;
+import com.type.Gender;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -50,5 +52,21 @@ class BirdTest {
         Assertions.assertEquals("Cluck, Cluck", outputStreamCaptor.toString()
                 .trim());
 
+    }
+
+    @Test
+    public void testRoosterSay() {
+        Rooster rooster = new Rooster();
+        rooster.say();
+        Assertions.assertEquals("Cock-a-doodle-doo", outputStreamCaptor.toString()
+                .trim());
+
+    }
+
+    @Test
+    public void testRoosterIsMaleChicken() {
+        Rooster rooster = new Rooster();
+        Assertions.assertTrue(rooster instanceof Chicken);
+        Assertions.assertEquals(Gender.MALE, rooster.getGender());
     }
 }

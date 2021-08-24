@@ -1,4 +1,7 @@
-package com.animal;
+package com.animal.bird;
+
+import com.animal.Animal;
+import com.animal.Singable;
 
 public class Bird extends Animal implements Singable {
     public void fly() {

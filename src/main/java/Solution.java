@@ -1,4 +1,4 @@
-import com.animal.Bird;
+import com.animal.bird.Bird;
 
 public class Solution {
 
