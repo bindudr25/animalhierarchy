@@ -1,5 +1,7 @@
 package com.animal;
 
 public interface Swimmable {
-    void swim();
+    default void swim() {
+        System.out.println("I am Swimming");
+    }
 }
